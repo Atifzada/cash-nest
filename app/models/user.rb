@@ -1,4 +1,4 @@
 class User < ApplicationRecord
-    has_many :groups
-    has_many :cash
+  has_many :groups
+  has_many :cash
 end
