@@ -10,13 +10,29 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= stylesheet_link_tag 'style', media: 'all', 'data-turbolinks-track': 'reload' %>
+
 
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-  <%= render 'shared/navbar' %>
+  <nav>
+  <ul>
+    <li><%= link_to "Home", root_path %></li>
+
+  </ul>
+  <div> <% if user_signed_in? %>
+   <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "signout-btn" %>
+    <% else %>
+      <%= link_to "Sign in", new_user_session_path, class: "signin-btn" %>
+      <%= link_to "Sign up", new_user_registration_path, class: "signup-btn" %>
+    <% end %>
+    </div>
+</nav>
+<div class="notification">
+<span class="notice"><%= notice %></span>
+<span class="alert"><%= alert %></span>
+</div>
     <%= yield %>
   </body>
 </html>
