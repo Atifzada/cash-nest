@@ -26,6 +26,4 @@ test:
 
 production:
   <<: *default
-  database: cash-nest
-  username: postgres
-  password: Wadan12345
+  url: <%= ENV['DATABASE_URL'] %>
