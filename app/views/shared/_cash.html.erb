@@ -1,0 +1,17 @@
+<%= form_with url: user_group_cashes_path, method: :post do |form| %>
+    <div class="card p-3">
+      <div class="field mb-3 d-flex flex-column justify-content-center">
+        <%= form.label :name %>
+        <%= form.text_field :name, name: 'cash[name]' %>
+      </div>
+  
+      <div class="field mb-3 d-flex flex-column justify-content-center">
+        <%= form.label :amount %>
+        <%= form.text_field :amount, name: 'cash[amount]' %>
+      </div>
+  
+      <div class="mb-3">
+        <%= form.submit "Submit" %>
+      </div>
+    </div>
+  <% end %>
