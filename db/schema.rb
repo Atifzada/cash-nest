@@ -10,26 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_09_064154) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_10_071807) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "cashes", force: :cascade do |t|
+    t.string "name"
+    t.decimal "amount"
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_cashes_on_user_id"
   end
 
   create_table "group_cashes", force: :cascade do |t|
+    t.bigint "group_id", null: false
+    t.bigint "cash_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["cash_id"], name: "index_group_cashes_on_cash_id"
+    t.index ["group_id"], name: "index_group_cashes_on_group_id"
   end
 
   create_table "groups", force: :cascade do |t|
+    t.string "name"
+    t.string "icon"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "email", default: "", null: false
@@ -37,9 +48,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_09_064154) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.string "name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "cashes", "users"
+  add_foreign_key "group_cashes", "cashes"
+  add_foreign_key "group_cashes", "groups"
 end

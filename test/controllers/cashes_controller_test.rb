@@ -1,6 +1,6 @@
 require "test_helper"
 
-class GroupCashTest < ActiveSupport::TestCase
+class CashesControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

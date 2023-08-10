@@ -81,3 +81,11 @@
     background-color: #c82333;
   }
   
+  .notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #c82333;
+    font-weight: 600;
+  }
+  
