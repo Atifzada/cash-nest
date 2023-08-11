@@ -8,6 +8,7 @@
 <h1 class="custom_color">Your Catogeries</h1>
 <div class="card w-50">
 <ul class="card list-group">
+<% if @items.present? %>
 <% @items.each do |item| %>
     <li class="px-2 list-group-item d-flex justify-content-between align-items-center col-12"> 
     <div class=" d-flex justify-content-between align-items-center col-8">
@@ -22,6 +23,11 @@
      <span class="text-primary date"><b class="text-dark px-2">Date: </b><%= item.created_at.strftime('%B-%d-%Y') %></span>
      </div></li>
     <% end %>
+    <% else %>
+
+    <p>No item.</p>
+
+<% end %>
 </ul>
 </div>
 </div>
