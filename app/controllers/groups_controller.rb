@@ -7,6 +7,7 @@ class GroupsController < ApplicationController
     @items.each do |item|
       @total_amount += item.cashes.sum(:amount)
     end
+    end
   end
   def show
     @current_user = current_user
