@@ -3,6 +3,7 @@ class GroupsController < ApplicationController
   def index
     @items = current_user.groups.includes(:cashes)
     @total_amount = 0
+    if @items
     @items.each do |item|
       @total_amount += item.cashes.sum(:amount)
     end
