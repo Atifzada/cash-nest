@@ -15,5 +15,9 @@
         <%= form.submit "Submit", class: "btn btn-primary" %>
       </div>
     </div>
+    <div class="field mb-3 d-flex flex-column justify-content-center">
+    <%= form.label :groups %>
+    <%= form.select :groups, options_from_collection_for_select(@groups, 'id', 'name') %>
+  </div>
   <% end %>
 </div>

@@ -8,6 +8,7 @@ class CashesController < ApplicationController
 
   def new
     @current_user = current_user
+    @groups = @current_user.groups
     @group = @current_user.groups.find_by_id(params[:group_id])
     @cash = @group.cashes.new
   end
@@ -16,7 +17,7 @@ class CashesController < ApplicationController
     @current_user = current_user
     @cash_create = @current_user.cashes.build(cash_params)
     if @cash_create.save
-      @group_cashes = GroupCash.create(group_id: params[:group_id], cash_id: @cash_create.id)
+      @group_cashes = GroupCash.create(group_id: params[:groups], cash_id: @cash_create.id)
       redirect_to "/users/#{current_user.id}/groups/"
       flash[:notice] = 'Successfully create'
     else
