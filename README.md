@@ -103,13 +103,13 @@ To run tests, run the following command:
 
 ### Deployment
 
-[Deployment_link](https://mycashnest.onrender.com)
+[Deployment_link](https://cash-nest.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ##  Video-Presentation <a id="video"></a>
 
-You can view a video presentation of this app [here]([https://www.loom.com/share/be8d68bf9e3c4a4db011d7a5f3a90255?sid=872bace7-0330-4d89-8c0c-ef66bf4c68af](https://www.loom.com/share/2269b03aaf6840e882a5f5e54a01913f?sid=e510c900-03e1-4b7b-832d-2ab2d8f5d2af))
+You can view a video presentation of this app [here](https://www.loom.com/share/2269b03aaf6840e882a5f5e54a01913f?sid=14ae5897-ab34-472c-9a5e-282b36203b6c)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
