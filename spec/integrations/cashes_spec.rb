@@ -6,7 +6,8 @@ RSpec.describe 'cash', type: :feature do
       User.destroy_all
       Group.destroy_all
       @user = User.create(name: 'Atif', email: 'atif@email.com', password: 'asd123')
-      @group = Group.create(name: 'easypaisa', icon: Rack::Test::UploadedFile.new("#{Rails.root}/spec/media/alibaba.jpg"))
+      @group = Group.create(name: 'easypaisa',
+                            icon: Rack::Test::UploadedFile.new("#{Rails.root}/spec/media/alibaba.jpg"))
       visit new_user_session_path
       fill_in 'Email', with: 'atif@email.com'
       fill_in 'Password', with: 'asd123'

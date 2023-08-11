@@ -13,10 +13,11 @@
  *= require_tree .
  *= require_self
  */
- @font-face {
+@font-face {
   font-family: proxima;
   src: url(FontsFree-Net-Proxima-Nova-Bold.otf);
 }
+
 @font-face {
   font-family: proxima-light;
   src: url(FontsFree-Net-Proxima-Nova-Light.otf);
@@ -33,7 +34,7 @@ h5 {
 body p,
 span {
   font-family: proxima-light, sans-serif;
-  color: #3378C2;
+  color: #3378c2;
 }
 
 body {
