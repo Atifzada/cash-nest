@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Group, type: :model do
   @user = User.create(name: 'atif')
   subject do
-    Group.new(name: 'easypasia', icon: Rack::Test::UploadedFile.new('spec/media/easypaisa.png'))
+    Group.new(name: 'easypasia', icon: Rack::Test::UploadedFile.new('spec/media/alibaba.jpg'))
   end
   before { subject.save }
   it 'name should be present' do
