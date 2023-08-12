@@ -1,0 +1,21 @@
+
+<%= form_with model: [current_user, @group] do |form| %>
+
+    <div>
+
+    <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %><br>
+    <div>
+
+    <div class="field mb-3 d-flex flex-column justify-content-center">
+    <%= form.label :icon %>
+    <%= form.file_field :icon %><br>
+    </div>
+
+    <div class="mb-3">
+    <%= form.submit "Submit" %>
+    </div>
+    </div>
+
+    <% end %>

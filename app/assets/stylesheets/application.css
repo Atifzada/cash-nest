@@ -13,3 +13,102 @@
  *= require_tree .
  *= require_self
  */
+@font-face {
+  font-family: proxima;
+  src: url(FontsFree-Net-Proxima-Nova-Bold.otf);
+}
+
+@font-face {
+  font-family: proxima-light;
+  src: url(FontsFree-Net-Proxima-Nova-Light.otf);
+}
+
+body h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: proxima, sans-serif;
+}
+
+body p,
+span {
+  font-family: proxima-light, sans-serif;
+  color: #3378c2;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: #555;
+}
+
+.signout-btn {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signin-btn {
+  background-color: #00c44b;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signup-btn {
+  background-color: #3835dc;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signout-btn:hover {
+  background-color: #c82333;
+}
+
+.notification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #c82333;
+  font-weight: 600;
+}
